@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - OIDC Auth Demo</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Load the OIDC client library first -->
+  <script src="https://cdn.jsdelivr.net/npm/oidc-client-ts@2.2.4/dist/browser/oidc-client-ts.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>OIDC Auth Demo</h1>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="#" id="login-status">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="login-section">
+        <div class="card">
+          <div class="card-header">
+            <h2>Login</h2>
+          </div>
+          <div class="card-content">
+            <p>Click the button below to login with your identity provider.</p>
+            <button id="login-button" class="btn btn-primary">Login with OIDC</button>
+            <div id="login-message" class="message"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 OIDC Auth Demo</p>
+    </footer>
+  </div>
+  
+  <!-- Then load our modules -->
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>
+

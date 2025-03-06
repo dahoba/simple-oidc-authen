@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - OIDC Auth Demo</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Load the OIDC client library first -->
+  <script src="https://cdn.jsdelivr.net/npm/oidc-client-ts@3.1.0/dist/browser/oidc-client-ts.min.js"></script>    
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>OIDC Authentication Demo</h1>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html" class="active">Profile</a></li>
+          <li><a href="#" id="login-status">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="profile-section">
+        <h2>User Profile</h2>
+        <div id="profile-loading" class="loading">
+          <p>Loading profile data...</p>
+          <div class="spinner"></div>
+        </div>
+        <div id="profile-error" class="error hidden"></div>
+        <div id="profile-data" class="hidden">
+          <div class="profile-card">
+            <div class="profile-header">
+              <div class="profile-avatar">
+                <img id="profile-picture" src="/img/placeholder.svg?height=100&width=100" alt="Profile Picture">
+              </div>
+              <div class="profile-info">
+                <h3 id="profile-name">Name</h3>
+                <p id="profile-email">email@example.com</p>
+              </div>
+            </div>
+            <div class="profile-details">
+              <h4>User Information</h4>
+              <table class="profile-table">
+                <tbody id="profile-details-table">
+                  <!-- Profile details will be inserted here -->
+                </tbody>
+              </table>
+            </div>
+            <div class="profile-actions">
+              <button id="logout-button" class="btn btn-destructive">Logout</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 OIDC Auth Demo</p>
+    </footer>
+  </div> 
+  <!-- Then load our modules -->
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/profile.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,3 @@
+# node js repo .gitignore list
+node_modules/
+npm-debug.log

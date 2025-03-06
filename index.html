@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OIDC Auth Demo</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Load the OIDC client library first -->
+  <script src="https://cdn.jsdelivr.net/npm/oidc-client-ts@3.1.0/dist/browser/oidc-client-ts.min.js"></script>  
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>OIDC Authentication Demo</h1>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="profile.html" id="profile-link">Profile</a></li>
+          <li><a href="#" id="login-status">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="hero">
+        <h2>Welcome to the OIDC Authentication Demo</h2>
+        <p>A minimal, clean implementation of OpenID Connect authentication using the oidc-client-ts library.</p>
+        <div class="btn-group">
+          <button id="login-button" class="btn btn-primary">Login</button>
+          <a href="profile.html" class="btn btn-outline">View Profile</a>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 OIDC Auth Demo</p>
+    </footer>
+  </div>  
+  <!-- Then load our modules -->
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
+
